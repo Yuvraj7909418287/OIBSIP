@@ -40,7 +40,7 @@ public class ResultPanel extends JPanel {
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
         content.setBorder(new EmptyBorder(30, 60, 30, 60));
 
-        // Result box
+        
         JPanel box = new JPanel() {
             @Override protected void paintComponent(Graphics g) {
                 Graphics2D g2 = (Graphics2D) g.create();
@@ -71,7 +71,7 @@ public class ResultPanel extends JPanel {
         box.add(examName);
         box.add(Box.createVerticalStrut(20));
 
-        // Score Ring (drawn manually)
+        
         JPanel ring = new JPanel() {
             @Override protected void paintComponent(Graphics g) {
                 Graphics2D g2 = (Graphics2D) g.create();
@@ -100,7 +100,7 @@ public class ResultPanel extends JPanel {
         box.add(ring);
         box.add(Box.createVerticalStrut(20));
 
-        // Stats
+
         JPanel stats = new JPanel(new GridLayout(1, 3, 12, 0));
         stats.setOpaque(false);
         stats.setMaximumSize(new Dimension(Integer.MAX_VALUE, 80));
@@ -110,7 +110,7 @@ public class ResultPanel extends JPanel {
         box.add(stats);
         box.add(Box.createVerticalStrut(20));
 
-        // Buttons
+    
         JPanel btnRow = new JPanel(new FlowLayout(FlowLayout.CENTER, 12, 0));
         btnRow.setOpaque(false);
         btnRow.setAlignmentX(Component.CENTER_ALIGNMENT);
