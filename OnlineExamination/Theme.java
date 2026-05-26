@@ -3,7 +3,7 @@ package exam;
 import java.awt.*;
 
 public class Theme {
-    // Colors
+    
     public static final Color BG          = new Color(15, 17, 23);
     public static final Color SURFACE     = new Color(24, 28, 39);
     public static final Color CARD        = new Color(30, 35, 54);
@@ -18,7 +18,7 @@ public class Theme {
     public static final Color INFO        = new Color(74, 142, 245);
     public static final Color WHITE       = Color.WHITE;
 
-    // Fonts
+
     public static final Font TITLE_FONT  = new Font("SansSerif", Font.BOLD, 22);
     public static final Font HEADER_FONT = new Font("SansSerif", Font.BOLD, 16);
     public static final Font BODY_FONT   = new Font("SansSerif", Font.PLAIN, 14);
@@ -26,11 +26,11 @@ public class Theme {
     public static final Font MONO_FONT   = new Font("Monospaced", Font.BOLD, 20);
     public static final Font BOLD_FONT   = new Font("SansSerif", Font.BOLD, 14);
 
-    // Dimensions
+    
     public static final int WINDOW_W = 900;
     public static final int WINDOW_H = 650;
 
-    // Helper: Rounded Rectangle Button
+    
     public static javax.swing.JButton createButton(String text, Color bg, Color fg) {
         javax.swing.JButton btn = new javax.swing.JButton(text) {
             @Override protected void paintComponent(Graphics g) {
