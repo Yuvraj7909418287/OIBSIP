@@ -11,12 +11,11 @@ public class DataStore {
     private static List<Exam> exams        = new ArrayList<>();
 
     static {
-        // Default users
+    
         users.put("admin",   new User("admin",   "admin123", "Admin",   "User",   "admin@examportal.com",  "9876543210"));
         users.put("student", new User("student", "student1", "Ravi",    "Sharma", "ravi@example.com",      "9123456789"));
         users.put("rahul",   new User("rahul",   "rahul123", "Rahul",   "Verma",  "rahul@example.com",     ""));
 
-        // Exam 1: General Knowledge
         Exam gk = new Exam("General Knowledge", 600);
         gk.addQuestion(new Question("What is the capital of India?",
             new String[]{"Mumbai", "New Delhi", "Kolkata", "Chennai"}, 1));
@@ -40,7 +39,7 @@ public class DataStore {
             new String[]{"Amazon", "Mississippi", "Yangtze", "Nile"}, 3));
         exams.add(gk);
 
-        // Exam 2: Computer Science
+        
         Exam cs = new Exam("Computer Science", 900);
         cs.addQuestion(new Question("What does HTML stand for?",
             new String[]{"HyperText Markup Language", "HighText Machine Language", "Hyperlinks and Text Markup", "None of above"}, 0));
@@ -64,7 +63,7 @@ public class DataStore {
             new String[]{"A virus", "An error or defect", "A feature", "A file"}, 1));
         exams.add(cs);
 
-        // Exam 3: Mathematics
+        
         Exam math = new Exam("Mathematics", 1200);
         math.addQuestion(new Question("What is the value of Pi (π) approximately?",
             new String[]{"3.14", "2.71", "1.61", "3.41"}, 0));
