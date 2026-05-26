@@ -16,8 +16,6 @@ public class User {
         this.email     = email;
         this.phone     = phone;
     }
-
-    // Getters
     public String getUsername()  { return username; }
     public String getPassword()  { return password; }
     public String getFirstName() { return firstName; }
@@ -27,7 +25,7 @@ public class User {
     public String getFullName()  { return firstName + " " + lastName; }
     public String getInitials()  { return String.valueOf(firstName.charAt(0)).toUpperCase(); }
 
-    // Setters
+
     public void setPassword(String password)   { this.password  = password; }
     public void setFirstName(String firstName) { this.firstName = firstName; }
     public void setLastName(String lastName)   { this.lastName  = lastName; }
