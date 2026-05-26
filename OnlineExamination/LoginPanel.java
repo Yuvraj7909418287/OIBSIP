@@ -36,7 +36,7 @@ public class LoginPanel extends JPanel {
         card.setBorder(new EmptyBorder(40, 40, 40, 40));
         card.setPreferredSize(new Dimension(420, 480));
 
-        // Brand
+        
         JPanel brand = new JPanel();
         brand.setOpaque(false);
         brand.setLayout(new BoxLayout(brand, BoxLayout.Y_AXIS));
@@ -64,7 +64,7 @@ public class LoginPanel extends JPanel {
         card.add(brand);
         card.add(Box.createVerticalStrut(30));
 
-        // Error label
+
         errorLabel = new JLabel(" ", SwingConstants.CENTER);
         errorLabel.setFont(Theme.SMALL_FONT);
         errorLabel.setForeground(Theme.DANGER);
@@ -77,7 +77,7 @@ public class LoginPanel extends JPanel {
         card.add(errorLabel);
         card.add(Box.createVerticalStrut(10));
 
-        // Username field
+        
         card.add(makeFieldLabel("USERNAME"));
         card.add(Box.createVerticalStrut(6));
         usernameField = Theme.createTextField();
@@ -86,7 +86,7 @@ public class LoginPanel extends JPanel {
         card.add(usernameField);
         card.add(Box.createVerticalStrut(14));
 
-        // Password field
+        
         card.add(makeFieldLabel("PASSWORD"));
         card.add(Box.createVerticalStrut(6));
         passwordField = Theme.createPasswordField();
@@ -95,7 +95,7 @@ public class LoginPanel extends JPanel {
         card.add(passwordField);
         card.add(Box.createVerticalStrut(22));
 
-        // Login Button
+        
         JButton loginBtn = Theme.createButton("  LOGIN  →", Theme.GOLD, new Color(30, 18, 0));
         loginBtn.setMaximumSize(new Dimension(Integer.MAX_VALUE, 42));
         loginBtn.setFont(new Font("SansSerif", Font.BOLD, 15));
@@ -104,15 +104,13 @@ public class LoginPanel extends JPanel {
         card.add(loginBtn);
 
         card.add(Box.createVerticalStrut(16));
-
-        // Demo hint
         JLabel hint = new JLabel("<html><center>Demo credentials: <b>admin</b> / <b>admin123</b></center></html>", SwingConstants.CENTER);
         hint.setFont(Theme.SMALL_FONT);
         hint.setForeground(Theme.MUTED);
         hint.setAlignmentX(Component.CENTER_ALIGNMENT);
         card.add(hint);
 
-        // Enter key on password
+        
         passwordField.addActionListener(e -> doLogin());
 
         add(card);
