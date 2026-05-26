@@ -16,7 +16,7 @@ public class ExamPanel extends JPanel {
     private Timer countdownTimer;
     private boolean submitted = false;
 
-    // UI refs
+
     private JLabel timerLabel;
     private JLabel questionCounter;
     private JLabel questionText;
@@ -71,7 +71,7 @@ public class ExamPanel extends JPanel {
         header.add(timerLabel, BorderLayout.EAST);
         add(header, BorderLayout.NORTH);
 
-        // MAIN SPLIT
+        
         JSplitPane split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
         split.setBackground(Theme.BG);
         split.setBorder(null);
@@ -89,7 +89,7 @@ public class ExamPanel extends JPanel {
         area.setLayout(new BoxLayout(area, BoxLayout.Y_AXIS));
         area.setBorder(new EmptyBorder(20, 24, 20, 16));
 
-        // Progress bar
+        
         progressBar = new JProgressBar(0, exam.getTotalQuestions());
         progressBar.setValue(1);
         progressBar.setStringPainted(false);
@@ -106,7 +106,7 @@ public class ExamPanel extends JPanel {
         area.add(questionCounter);
         area.add(Box.createVerticalStrut(16));
 
-        // Question card
+        
         JPanel qCard = new JPanel() {
             @Override protected void paintComponent(Graphics g) {
                 Graphics2D g2 = (Graphics2D) g.create();
@@ -137,7 +137,7 @@ public class ExamPanel extends JPanel {
         area.add(qCard);
         area.add(Box.createVerticalStrut(16));
 
-        // Navigation buttons
+        
         JPanel nav = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 0));
         nav.setOpaque(false);
         nav.setAlignmentX(Component.LEFT_ALIGNMENT);
@@ -181,7 +181,7 @@ public class ExamPanel extends JPanel {
         side.add(paletteGrid);
         side.add(Box.createVerticalStrut(16));
 
-        // Legend
+
         side.add(makeLegend("■", Theme.GOLD, "Answered"));
         side.add(Box.createVerticalStrut(5));
         side.add(makeLegend("■", Theme.INFO, "Current"));
