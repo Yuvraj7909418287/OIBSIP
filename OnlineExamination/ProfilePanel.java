@@ -22,7 +22,7 @@ public class ProfilePanel extends JPanel {
     }
 
     private void buildUI() {
-        // NAV
+        
         JPanel nav = new JPanel(new BorderLayout());
         nav.setBackground(Theme.CARD);
         nav.setBorder(new CompoundBorder(
@@ -47,7 +47,7 @@ public class ProfilePanel extends JPanel {
         nav.add(right, BorderLayout.EAST);
         add(nav, BorderLayout.NORTH);
 
-        // CONTENT
+    
         JScrollPane scroll = new JScrollPane(buildContent());
         scroll.setBorder(null);
         scroll.getViewport().setBackground(Theme.BG);
@@ -60,19 +60,19 @@ public class ProfilePanel extends JPanel {
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
         content.setBorder(new EmptyBorder(24, 80, 24, 80));
 
-        // Profile Header Card
+        
         JPanel header = buildHeaderCard();
         header.setMaximumSize(new Dimension(Integer.MAX_VALUE, 120));
         content.add(header);
         content.add(Box.createVerticalStrut(20));
 
-        // Status label
+        
         statusLabel = new JLabel(" ");
         statusLabel.setFont(Theme.SMALL_FONT);
         statusLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
         statusLabel.setVisible(false);
 
-        // Tabs
+    
         JTabbedPane tabs = new JTabbedPane();
         tabs.setBackground(Theme.CARD);
         tabs.setForeground(Theme.TEXT);
