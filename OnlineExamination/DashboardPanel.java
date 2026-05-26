@@ -20,11 +20,10 @@ public class DashboardPanel extends JPanel {
     }
 
     private void buildUI() {
-        // --- TOP NAV BAR ---
         JPanel navbar = buildNavBar();
         add(navbar, BorderLayout.NORTH);
 
-        // --- MAIN CONTENT ---
+        
         JScrollPane scroll = new JScrollPane(buildContent());
         scroll.setBorder(null);
         scroll.getViewport().setBackground(Theme.BG);
@@ -84,18 +83,15 @@ public class DashboardPanel extends JPanel {
         content.setBackground(Theme.BG);
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
         content.setBorder(new EmptyBorder(24, 32, 24, 32));
-
-        // Welcome Banner
         content.add(buildWelcomeBanner());
         content.add(Box.createVerticalStrut(24));
 
-        // Quick Actions
+    
         content.add(makeSectionTitle("QUICK ACTIONS"));
         content.add(Box.createVerticalStrut(10));
         content.add(buildQuickActions());
         content.add(Box.createVerticalStrut(24));
 
-        // Available Exams
         content.add(makeSectionTitle("AVAILABLE EXAMS"));
         content.add(Box.createVerticalStrut(10));
         content.add(buildExamList());
